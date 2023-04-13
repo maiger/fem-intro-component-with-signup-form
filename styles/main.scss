@@ -1,0 +1,154 @@
+@import "./breakpoints.scss";
+@import "./setup.scss";
+
+body {
+  background-color: var(--color-primary-1);
+  background-image: url(../images/bg-intro-desktop.png);
+
+  @include sm {
+    background-image: url(../images/bg-intro-mobile.png);
+  }
+}
+
+main {
+  display: flex;
+  margin: 2rem;
+  max-width: 100rem;
+  align-items: center;
+
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.text {
+  &__section {
+    margin-right: 6rem;
+    width: 50%;
+
+    @include sm {
+      margin: 5rem 1rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: var(--text-heading-size);
+    color: var(--color-neutral-white);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+
+    @include sm {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    font-size: var(--text-para-size);
+    color: var(--color-neutral-white);
+  }
+}
+
+.form {
+  &__section {
+    width: 50%;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    font-size: var(--text-para-size);
+    font-weight: var(--text-weight-regular);
+    color: var(--color-neutral-white);
+    background-color: var(--color-accent);
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+
+    span {
+      font-weight: var(--text-weight-semibold);
+    }
+  }
+
+  &__signup {
+    background-color: var(--color-neutral-white);
+    padding: 3rem;
+    border-radius: 10px;
+
+    @include sm {
+      padding: 2rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 1.5rem 3rem;
+      margin: 0 0 1rem 0;
+      border: 1px solid var(--color-neutral-gray-1);
+      border-radius: 5px;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 1rem;
+
+      img {
+        position: absolute;
+        top: 1.2rem;
+        right: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: var(--text-weight-medium);
+        text-align: end;
+        color: var(--color-primary-1);
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__claim {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-primary-2);
+    box-shadow: 0 3px 0 rgb(35, 176, 110);
+    margin-bottom: 2rem;
+    cursor: pointer;
+    color: var(--color-neutral-white);
+    text-transform: uppercase;
+    font-weight: var(--text-weight-medium);
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgb(132, 233, 186);
+    }
+  }
+
+  &__terms {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-neutral-gray-1);
+
+    a {
+      color: var(--color-primary-1);
+      font-weight: var(--text-weight-bold);
+    }
+  }
+}
+
+.invalid {
+  outline: 2px solid var(--color-primary-1) !important;
+  border: 1px solid transparent !important;
+}
+
+.hidden {
+  display: none;
+}

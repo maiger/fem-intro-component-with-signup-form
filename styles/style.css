@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ---------- VARIABLES ---------- */
+:root {
+  /* COLORS */
+  /* PRIMARY */
+  --color-primary-1: hsl(0, 100%, 74%);
+  --color-primary-2: hsl(154, 59%, 51%);
+  /* ACCENT */
+  --color-accent: hsl(248, 32%, 49%);
+  /* NEUTRAL */
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-gray-1: hsl(246, 25%, 77%);
+  --color-neutral-gray-2: hsl(249, 10%, 26%);
+  /* TEXT */
+  --text-heading-size: 4rem;
+  --text-para-size: 1.6rem;
+  --text-sans-serif-font: "Poppins", sans-serif;
+  --text-weight-regular: 400;
+  --text-weight-medium: 500;
+  --text-weight-semibold: 600;
+  --text-weight-bold: 700;
+}
+
+/* ---------- BASE STYLES ---------- */
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: var(--text-sans-serif-font);
+  font-weight: var(--text-weight-regular);
+  font-size: var(--text-para-size);
+}
+
+footer {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+}
+
+body {
+  background-color: var(--color-primary-1);
+  background-image: url(../images/bg-intro-desktop.png);
+}
+@media (max-width: 650px) {
+  body {
+    background-image: url(../images/bg-intro-mobile.png);
+  }
+}
+
+main {
+  display: flex;
+  margin: 2rem;
+  max-width: 100rem;
+  align-items: center;
+}
+@media (max-width: 650px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+.text__section {
+  margin-right: 6rem;
+  width: 50%;
+}
+@media (max-width: 650px) {
+  .text__section {
+    margin: 5rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+.text__title {
+  font-size: var(--text-heading-size);
+  color: var(--color-neutral-white);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+@media (max-width: 650px) {
+  .text__title {
+    font-size: 3rem;
+  }
+}
+.text__description {
+  font-size: var(--text-para-size);
+  color: var(--color-neutral-white);
+}
+
+.form__section {
+  width: 50%;
+}
+@media (max-width: 650px) {
+  .form__section {
+    width: 100%;
+  }
+}
+.form__header {
+  font-size: var(--text-para-size);
+  font-weight: var(--text-weight-regular);
+  color: var(--color-neutral-white);
+  background-color: var(--color-accent);
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+.form__header span {
+  font-weight: var(--text-weight-semibold);
+}
+.form__signup {
+  background-color: var(--color-neutral-white);
+  padding: 3rem;
+  border-radius: 10px;
+}
+@media (max-width: 650px) {
+  .form__signup {
+    padding: 2rem;
+  }
+}
+.form__signup input {
+  width: 100%;
+  padding: 1.5rem 3rem;
+  margin: 0 0 1rem 0;
+  border: 1px solid var(--color-neutral-gray-1);
+  border-radius: 5px;
+}
+.form__signup .input-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form__signup .input-container img {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+}
+.form__signup .input-container p {
+  font-size: 1rem;
+  font-weight: var(--text-weight-medium);
+  text-align: end;
+  color: var(--color-primary-1);
+  margin-bottom: 1.5rem;
+}
+.form__claim {
+  width: 100%;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-primary-2);
+  box-shadow: 0 3px 0 rgb(35, 176, 110);
+  margin-bottom: 2rem;
+  cursor: pointer;
+  color: var(--color-neutral-white);
+  text-transform: uppercase;
+  font-weight: var(--text-weight-medium);
+  letter-spacing: 1px;
+  transition: background-color 0.2s;
+}
+.form__claim:hover {
+  background-color: rgb(132, 233, 186);
+}
+.form__terms {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-neutral-gray-1);
+}
+.form__terms a {
+  color: var(--color-primary-1);
+  font-weight: var(--text-weight-bold);
+}
+
+.invalid {
+  outline: 2px solid var(--color-primary-1) !important;
+  border: 1px solid transparent !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
